@@ -1,0 +1,11 @@
+{
+  "include": ["index.js"],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "lib": ["es2020"],
+    "strict": true,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
+}

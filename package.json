@@ -1,0 +1,26 @@
+{
+  "name": "@sup39/rehype-mdx-component-wrapper",
+  "version": "0.1.0",
+  "author": "sup39",
+  "repository": "https://github.com/sup39/rehype-mdx-component-wrapper",
+  "description": "A rehype plugin to wrap the mdx component with external component",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint index.js"
+  },
+  "devDependencies": {
+    "@sup39/eslint-config-basic": "^0.1.5",
+    "@types/hast": "^2.3.4",
+    "eslint": "^8.26.0",
+    "mdast-util-mdx": "^2.0.0",
+    "typescript": "^4.8.4",
+    "unified": "^10.1.2"
+  }
+}
