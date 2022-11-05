@@ -42,14 +42,16 @@ const withMDX = mdx({
     remarkPlugins: [
       remarkFrontmatter,
       // export all metadata into an object with name `meta`
-      () => remarkMdxFrontmatter({name: 'meta'}),
+      [remarkMdxFrontmatter, {name: 'meta'}],
     ],
-    rehypePlugins: [() => ComponentWrapper({
-      name: 'MDXRoot',
-      path: '@/MDXRoot',
-      // pass the exported `meta` object to the wrapper component
-      props: ['meta'],
-    })],
+    rehypePlugins: [
+      [ComponentWrapper, {
+        name: 'MDXRoot',
+        path: '@/MDXRoot',
+        // pass the exported `meta` object to the wrapper component
+        props: ['meta'],
+      }],
+    ],
   },
 });
 export default withMDX({
